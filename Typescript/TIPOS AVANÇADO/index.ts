@@ -113,3 +113,37 @@ interface Person {
 interface Person {
     age: number;
 }
+
+// literal types
+
+let test: "testando";
+
+test = "testando";
+
+console.log(test);
+
+const showDirection = (direction: "left" | "right" | "center") => {
+    console.log(`A direção é: ${direction}`);
+};
+
+showDirection("center");
+
+// Non null assertion operator !
+
+const p = document.getElementById("some-p");
+
+console.log(p!.innerText);
+
+// big int
+
+let n: bigint;
+
+n = 1000n;
+
+//symbol
+
+let symbolA: symbol = Symbol("a");
+let symbolB: symbol = Symbol("a");
+
+console.log(symbolA == symbolB);
+console.log(symbolA === symbolB);
